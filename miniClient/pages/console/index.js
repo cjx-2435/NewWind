@@ -128,6 +128,7 @@ Page({
 
     //二维码url解码
     let scan_url = decodeURIComponent(query.q);
+    
     //获取设备id参数
     const devive_id = query.q?(scan_url.split("?")[1].split("=")[1]):"设备号为空"; 
     wx.setStorageSync('device_id', devive_id);
