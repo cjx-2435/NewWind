@@ -1,0 +1,8 @@
+<view class="page" data-weui-theme="{{theme}}">
+    <view class="page__bd">
+        <view class="weui-article">
+            <view class="weui-article__h1">{{faq.faq_title}}</view>
+            <rich-text nodes="{{faq.faq_text}}"></rich-text>
+        </view>
+    </view>
+</view>

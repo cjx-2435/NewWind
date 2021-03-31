@@ -1,0 +1,107 @@
+<view class="detail_swiper">
+	<swiper autoplay circular indicator-dots>
+		<swiper-item wx:for="{{goodsObj.pics}}" wx:key="pics_id" wx:for-index="index" bindtap="handlePrevewImage"
+			data-index="{{index}}">
+			<image mode="aspectFill" src="{{item.pics_mid}}" />
+		</swiper-item>
+	</swiper>
+</view>
+<view class="goods_name_panel">
+	<view class="goods_name_row">
+		<view class="goods_name">{{goodsObj.goods_name}}</view>
+		<view class="goods_collect">
+			<text class="iconfont icon-shoucang"></text>
+			<view class="collect_text">收藏</view>
+		</view>
+	</view>
+	<view class="goods_price">￥{{goodsObj.goods_price}}</view>
+</view>
+
+<view class="goods_norms" bindtap="clickme">
+	<view class="goods_norms_text">规格</view>
+	<view class="goods_norms_choose">请选择 <text class="iconfont icon-right"></text></view>
+</view>
+
+<view class="goods_info">
+	<view class="goods_info_title">图文详情</view>
+	<view class="goods_info_content">
+		<!-- 富文本使用 -->
+		<rich-text nodes="{{goodsObj.goods_introduce}}"></rich-text>
+	</view>
+</view>
+
+<view class="btm_tool">
+	<view class="tool_item">
+		<view class="iconfont icon-kefu"></view>
+		<view>客服</view>
+		<button open-type="contact"></button>
+	</view>
+	<view class="tool_item">
+		<view class="iconfont icon-fenxiang"></view>
+		<view>分享</view>
+		<button open-type="share"></button>
+	</view>
+	<navigator open-type="switchTab" url="/pages/shop/cart/cart" class="tool_item">
+		<view class="iconfont icon-gouwuchekong"></view>
+		<view>购物车</view>
+	</navigator>
+	<view class="tool_item btn_cart" bindtap="handleCartAdd">
+		加入购物车
+	</view>
+	<view class="tool_item btn-buy">
+		立即购买
+	</view>
+
+	<view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+	<!--弹出框  -->
+	<view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+		<view class="sku">
+			<view class="sku_goods">
+				<view class="sku_goods_img">
+					<image src="https://test.zhipu-china.com:20111/swiper/1.jpg" />
+				</view>
+				<view class="sku_goods_name">
+					{{goodsObj.goods_name}}
+				</view>
+				<!-- <view class="sku_close">
+					X
+				</view> -->
+				<view class="iconfont icon-guanbi" bindtap="hideModal"></view>
+			</view>
+			<view class="sku_choose">
+				<view class="sku_attr">
+					<view class="sku_attr_text">属性</view>
+					<view class="sku_attr_tags">
+						<view class='attr_tags_item {{item.checked?"checked_parameter":""}}' wx:for="{{goodsObj.attrs}}" wx:key="attr_id" wx:for-index="index" data-id='{{item.attr_id}}' bindtap='parameterTap'>
+							<text class=''>{{item.attr_name}}</text>
+						</view>
+					</view>
+				</view>
+				<!-- 购买数量 -->
+				<view class="sku_num">
+					<view class="sku_num_text">购买数量</view>
+					<view class="num_sel">
+						<view class="sku_num_sel">
+							<!-- 减号 -->
+							<text class="sign {{num <= 1 ? 'disabled' : 'normal'}}" bindtap="delCount" data-index="{{index}}">-</text>
+							<!-- 数值 -->
+							<input class="number" type="number" bindchange="bindManual" value="{{num}}" />
+							<!-- 加号 -->
+							<text class="sign {{num >= 10 ? 'disabled' : 'normal'}}" bindtap="addCount"
+								data-index="{{index}}">+</text>
+						</view>
+					</view>
+				</view>
+				<!--  -->
+				<!--  -->
+
+			</view>
+
+			<view class="sku_btn">
+				<view class="tool_item btn_cart sku_addcart" bindtap="handleCartAdd">
+					加入购物车
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

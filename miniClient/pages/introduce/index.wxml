@@ -1,0 +1,4 @@
+<mp-cells >
+    <mp-cell wx:for="{{faqList}}" wx:key="faq_uuid"
+    link url="/pages/introduce/detail?uuid={{item.faq_uuid}}&date={{item.faq_date}}" value="{{item.faq_title}}" ></mp-cell>
+</mp-cells>

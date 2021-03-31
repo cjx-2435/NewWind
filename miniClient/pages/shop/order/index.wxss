@@ -1,0 +1,98 @@
+page {
+  background-color: #ededed;
+}
+.tab_all {
+  padding-top: 10rpx;
+}
+.tab_all .orders_item {
+  padding: 15rpx;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 15rpx;
+  border-bottom: 1px solid #888;
+}
+.tab_all .orders_item .orders_title_wrap {
+  display: flex;
+}
+.tab_all .orders_item .orders_title_wrap .orders_number {
+  padding-left: 5rpx;
+  flex: 5;
+}
+.tab_all .orders_item .orders_title_wrap .orders_state {
+  flex: 4;
+  text-align: right;
+  padding-right: 15rpx;
+}
+.tab_all .orders_item .orders_goods_wrap {
+  display: flex;
+}
+.tab_all .orders_item .orders_goods_wrap .orders_img_wrap {
+  flex: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tab_all .orders_item .orders_goods_wrap .orders_img_wrap image {
+  width: 70%;
+}
+.tab_all .orders_item .orders_goods_wrap .orders_info_wrap {
+  flex: 7;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.tab_all .orders_item .orders_goods_wrap .orders_info_wrap .goods_name {
+  color: #666;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.tab_all .orders_item .orders_goods_wrap .orders_info_wrap .goods_info {
+  font-size: 32rpx;
+  display: flex;
+}
+.tab_all .orders_item .orders_goods_wrap .orders_info_wrap .goods_info .goods_price {
+  flex: 1;
+  color: red;
+}
+.tab_all .orders_item .orders_goods_wrap .orders_info_wrap .goods_info .goods_num {
+  padding-right: 15rpx;
+  flex: 1;
+  text-align: right;
+}
+.tab_all .orders_item .total_info_wrap {
+  padding-top: 5rpx;
+  padding-bottom: 10rpx;
+  display: flex;
+  text-align: center;
+}
+.tab_all .orders_item .total_info_wrap .total_info_wrap_item {
+  flex: 5;
+  font-size: small;
+  color: #666;
+}
+.tab_all .orders_item .total_info_wrap .total_info_wrap_bigitem {
+  color: #933;
+  flex: 7;
+  font-size: small;
+}
+.tab_all .orders_item .footer_btn_wrap {
+  display: flex;
+  align-items: center;
+  padding: 15rpx;
+}
+.tab_all .orders_item .footer_btn_wrap .orders_date {
+  flex: 1;
+  text-align: center;
+  text-justify: auto;
+}
+.tab_all .orders_item .footer_btn_wrap .orders_item_btn {
+  border: 1px solid #888;
+  padding: 8rpx;
+  margin-left: 4rpx;
+  margin-right: 4rpx;
+  border-radius: 35rpx;
+  text-align: center;
+  flex: 1;
+}

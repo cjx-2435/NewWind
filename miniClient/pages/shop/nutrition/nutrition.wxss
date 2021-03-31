@@ -1,0 +1,77 @@
+/* pages/shop/nutrition/nutrition.wxss */
+.swiper {
+    width: 100%;
+    /* height: 306rpx; */
+}
+
+.swiper_img {
+    width: 100%;
+}
+
+.nutrition {
+    margin-top: 50rpx;
+    font-size: 34rpx;
+    font-weight: bold;
+    color: #333;
+}
+
+.nutrition_list {
+    margin-top: 30rpx;
+}
+
+.nutrition_item {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom: 2rpx solid #ccc ;
+    padding: 20rpx 0;
+    /* background: #ccc */
+}
+
+.nutrition_item_info {
+    width: 60%;
+}
+
+.nutrition_item_img {
+    width: 228rpx;
+    height: 228rpx;
+}
+
+.nutrition_item_img image {
+    width: 100%;
+    height: 100%;
+    border-radius: 10rpx;
+}
+
+.nutrition_title {
+    /* font-weight: normal; */
+    font-size: 38rpx;
+}
+
+.nutrition_info {
+    font-size: 28rpx;
+    font-weight: normal;
+    color: #7B889B;
+    display: -webkit-box;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:2;
+}
+
+.nutrition_item_remark {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30rpx;
+}
+
+.nutrition_item_price {
+    color: #51c691;
+}
+
+.nutrition_item_operate text {
+    margin-left: 20rpx;
+}

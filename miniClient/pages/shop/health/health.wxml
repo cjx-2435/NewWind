@@ -1,0 +1,39 @@
+<!--pages/shop/health/health.wxml-->
+<view class="swiper">
+    <image mode="widthFix" class="swiper_img" src="https://test.zhipu-china.com:20111/swiper/2.jpg"></image>
+</view>
+
+<!-- 健康之家产品列表 -->
+<view class="container health">
+    <span>
+    健康之家
+    </span>
+    <view class="health_list">
+        <!-- <view wx:for="{{healthList}}" class="health_item"> -->
+            <navigator
+			 class="health_item"
+			 wx:for="{{healthList}}"
+			 wx:key="goodsId"
+			 url="/pages/shop/detail/detail?goods_id={{item.goodsId}}"
+			>
+            <image class="health_item_img" src="{{item.goodsSmallLogo}}" lazy-load="true" />
+            <h5 class="health_name">{{item.goodsName}}</h5>
+        <!-- </view> -->
+        </navigator>
+    </view>
+</view>
+
+<!-- <view class="container health">
+    <span>
+    新风系统
+    </span>
+    <view class="health_list">
+        <view wx:for="{{healthList}}" class="health_item1">
+            <image class="health_item_img1" src="https://test.zhipu-china.com:20111/swiper/2.jpg" lazy-load="true" />
+            <view class="health_title1">
+                <h5 class="health_name1">重金属</h5>
+                <view class="health_brif1">动作 喜剧</view>
+            </view>
+        </view>
+    </view>
+</view> -->

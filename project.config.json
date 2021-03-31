@@ -1,0 +1,145 @@
+{
+  "miniprogramRoot": "miniClient/",
+  "description": "项目配置文件",
+  "cloudfunctionRoot": "miniCloudFun/",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": false,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": false,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": true,
+    "useApiHook": true,
+    "useApiHostProcess": false,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "enableEngineNative": false,
+    "bundle": false,
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.13.2",
+  "appid": "wx945236fe1be94c6f",
+  "projectname": "newwind",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "scripts": {},
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "个人中心",
+          "pathName": "pages/user/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "登陆",
+          "pathName": "pages/login/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 2,
+          "name": "首页",
+          "pathName": "pages/console/index",
+          "query": "scene=devive_id%3D864333046279881",
+          "scene": 1011
+        },
+        {
+          "id": -1,
+          "name": "订单查询",
+          "pathName": "pages/shop/order/index",
+          "query": "type=1",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "商城主页",
+          "pathName": "pages/shop/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 5,
+          "name": "商品详情页面",
+          "pathName": "pages/shop/detail/detail",
+          "query": "goods_id=43985",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "购物车",
+          "pathName": "pages/shop/cart/cart",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "支付",
+          "pathName": "pages/shop/pay/pay",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "关于新风",
+          "pathName": "pages/introduce/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "设备管理",
+          "pathName": "pages/user/device/devlist",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "设备列表页面",
+          "pathName": "pages/user/device/devlist",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

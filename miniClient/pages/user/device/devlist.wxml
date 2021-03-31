@@ -1,0 +1,41 @@
+<view class="scan_qcode">
+    <mp-icon bindtap="scan" icon="add" color="black" size="{{25}}"></mp-icon>
+</view>
+<view class="pswinput" hidden="{{hiddenPswInput}}">
+    <input type="text" class="psw" bindconfirm="handleCheckPsw" password="true"/>
+</view>
+<view class="dev_list_wrap" 
+wx:for="{{devList}}"
+wx:key="device_id"
+>
+<view class="dev_list_item" 
+bindtap="handleChangeDev"
+data-deviceid="{{item.device_id}}"
+>  
+    <view class="dev_item_title">
+        <!-- <icon class="icon-box-img" hidden="{{!item.isActive}}" type="success" size="20"></icon> -->
+        <icon class="icon-small" wx:if="{{item.isActive}}" type="success" size="23"></icon>
+        <icon class="icon-small" wx:else type="circle" size="23"></icon>
+        <text >设备信息卡</text>
+        <text class="dev_item_remove" catchtap="handleRemoveDevice" data-deviceid="{{item.device_id}}">解绑</text>
+    </view>
+    <view class="dev_item_text_wrap">
+        <view class="dev_text_item">设备编号：{{item.device_id}}</view>
+        <view class="dev_text_item">设备类型：{{item.device_type}}</view>
+        <view class="dev_text_item">绑定时间：{{item.device_bind_date_zh}}</view>
+        <view class="dev_text_item" catchtap="catch">设备状态：
+            <switch checked="{{item.device_state}}" bindchange="switch1Change" data-deviceid="{{item.device_id}}"  />
+        </view>
+        <view class="dev_text_item_wrap" >运行模式：
+            <view class="dev_text_item_changeMode" catchtap="handleChangedevMode" data-deviceid="{{item.device_id}}">{{item.running_mode_text}}
+            <mp-icon icon="setting" color="white" size="{{20}}"></mp-icon>
+            </view>
+        </view>
+        <view class="dev_text_item_wrap" catchtap="catch">备注信息：
+            <input class="dev_text_remark_input" placeholder="{{item.device_remark}}" bindinput="handleInput" data-deviceid="{{item.device_id}}"/>
+            <view class="dev_text_sele_btn" catchtap="handleWatchData" data-deviceid="{{item.device_id}}">选中并查看</view>
+        </view>
+    </view>
+</view>
+</view>
+<mp-actionSheet bindactiontap="changeRunModel" show="{{showActionsheet}}" actions="{{groups}}" title="红色字体模式###不能有人###"></mp-actionSheet>

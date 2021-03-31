@@ -1,0 +1,25 @@
+.tabs {
+  padding-left: 15rpx;
+  padding-right: 15rpx;
+}
+.tabs .tabs_title {
+  padding-top: 5rpx;
+  display: flex;
+  border: 2rpx solid #ccc;
+  border-bottom: 3px solid #eee;
+  border-bottom: 1px solid #888;
+  border-radius: 20rpx;
+  padding-bottom: 2rpx;
+}
+.tabs .tabs_title .title_item {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15rpx 1;
+  background-color: #fff;
+  padding: 5rpx;
+}
+.tabs .tabs_title .active {
+  color: red;
+}

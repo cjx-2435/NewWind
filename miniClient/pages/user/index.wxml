@@ -1,0 +1,85 @@
+<view class="user_info_wrap">
+	<view wx:if="{{userInfo.avatarUrl}}" class="user_img_wrap">
+		<image class="user_bg" src="{{userInfo.avatarUrl}}"></image>
+		<view class="user_info">
+			<image class="user_icon" src="{{userInfo.avatarUrl}}"></image>
+			<view class="user_name">{{userInfo.nickName}}</view>
+		</view>
+	</view>
+	<view wx:else class="user_btn">
+		<navigator url="/pages/login/index">登录</navigator>
+	</view>
+</view>
+<view class="user_content">
+	<view class="user_main">
+		<!-- 设备管理 -->
+		<view class="manage_wrap">
+			<button catchtap="handleChangedevMode" data-deviceid="{{device_id}}">
+				<view class="iconfont .icon-moshiqiehuan" ></view>
+				<view class="manage_text">模式设置</view>
+			</button>
+			<button catchtap="handleCloseDev" data-deviceid="{{device_id}}">
+				<view class="iconfont .icon-kaiguan"></view>
+				<view class="manage_text">关闭设备</view>
+			</button>
+			<button>
+				<view class="iconfont .icon-shipin"></view>
+				<view class="manage_text">视频监控</view>
+			</button>
+			<button bindtap="handleNavDeviceList">
+				<view class="iconfont .icon-shebeiguanli"></view>
+				<view class="manage_text">设备状况</view>
+			</button>
+		</view>
+		<!-- 订单管理 -->
+		 <view class="orders_wrap">
+			<view class="orders_title">我的订单</view>
+			<view class="order_content">
+				<navigator url="/pages/shop/order/index?type=1">
+					<view class="iconfont .icon-quanbudingdan"></view>
+					<view class="order_name">全部订单</view>
+				</navigator>
+				<navigator url="/pages/shop/order/index?type=2">
+					<view class="iconfont .icon-nopayment"></view>
+					<view class="order_name">待付款</view>
+				</navigator>
+				<navigator url="/pages/shop/order/index?type=3">
+					<view class="iconfont .icon-daishouhuo"></view>
+					<view class="order_name">待收货</view>
+				</navigator>
+				<navigator>
+					<view class="iconfont .icon-tuikuan" url="/pages/shop/order/index?type=4"></view>
+					<view class="order_name">退款退货</view>
+				</navigator>
+			</view>
+		</view>
+		<!-- 地址管理 -->
+		 <view class="address_wrap" bindtap="handleChooseAddress">
+			收货地址管理
+		</view>
+		<!--应用信息相关-->
+		<view class="app_info_wrap">
+			<view class="app_info_item app_info_contact">
+				<text >联系客服</text>
+				<text >0576-89028878</text>
+				<button open-type="contact"></button>
+			</view>
+			<view class="app_info_item">
+				意见反馈
+				<button open-type="feedback"></button>
+			</view>
+			<navigator url="/pages/introduce/index" class="app_info_item" >
+				新风介绍
+			</navigator>
+			<navigator url="/pages/user/aboutUs/aboutUs" class="app_info_item" >
+				关于我们
+			</navigator>
+		</view>
+		<!-- 推荐 -->
+		<view class="recommend_wrap">把应用推荐给其他人</view>
+		<!-- 退出 -->
+		<view class="recommend_wrap" catchtap="handleSetNoAutoLogin">退出登录</view>
+	</view>
+</view>
+<mp-actionSheet bindactiontap="changeRunModel" show="{{showActionsheet}}" actions="{{groups}}" title="红色字体模式###不能有人###"></mp-actionSheet>
+

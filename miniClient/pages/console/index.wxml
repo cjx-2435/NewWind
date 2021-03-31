@@ -1,0 +1,54 @@
+<!-- 首页 -->
+<view class="index_title">
+	<view class="index_top flex-wrp" style="flex-direction:row;">
+		<view class="index_date">{{dataDate}}</view>
+		<view class="index_rate">{{qualityRate}}</view>
+	</view>
+</view>
+<view class="console_floor">
+	<!--标题 -->
+	<view class="floor_title">
+		<view>{{runningmode}}</view>
+	</view>
+	<!-- 内容-->
+	<view
+	 class="floor_list"
+	 wx:for="{{dataList}}"
+	 wx:for-item="item"
+	 wx:for-index="index"
+	 wx:key="index"
+	>
+		<view class="flex-wrp">
+			<view class="div_font">
+				<view class="floor_list_tip">{{tipList[index]}}</view>
+				<view class="floor_list_vaule">{{item}}</view>
+			</view>
+			<view class="div_end">
+				<view class="floor_tip_explain">{{tipExplain[index]}}</view>
+				<view class="floor_tip_explain1">{{tipExplainValue[index][0]}}</view>
+				<view class="floor_tip_explain2">{{tipExplainValue[index][1]}}</view>
+			</view>
+		</view>
+	</view>
+
+	 <view class="floor_tip">当前查询设备的编号：{{deviceId}}</view> 
+</view>
+<view class="console_swiper">
+	<!--
+        swiper 标签默认宽度和高度 100%150px
+        image 标签默认宽度和高度 320px*240px
+        图片定 750*340
+     -->
+	<swiper
+	 autoplay
+	 indicator-dots
+	 circular
+	>
+		<swiper-item wx:for="{{swiperList}}" wx:key="goods_id">
+			<navigator>
+				<image mode="widthFix" src="{{item.image_src}}" />
+			</navigator>
+		</swiper-item>
+	</swiper>
+</view>
+

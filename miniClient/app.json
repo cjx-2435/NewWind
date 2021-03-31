@@ -1,0 +1,63 @@
+{
+  "pages":[
+    "pages/console/index",
+    "pages/introduce/index",
+    "pages/introduce/detail",
+    "pages/user/index",
+    "pages/user/device/devlist",
+    "pages/user/aboutUs/aboutUs",
+    "pages/login/index",
+    "pages/shop/index",
+    "pages/shop/order/index",
+    "pages/shop/detail/detail",
+    "pages/shop/cart/cart",
+    "pages/shop/pay/pay",
+    "pages/shop/category/category",
+    "pages/shop/health/health",
+    "pages/shop/nutrition/nutrition"
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "新风系统",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh":true
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#3ef9d2",
+    "backgroundColor": "#ffffff",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/console/index",
+        "text": "首页",
+        "iconPath": "icons/index_unchecking.png",
+        "selectedIconPath": "icons/index_checking.png"
+      },
+      {
+        "pagePath": "pages/shop/cart/cart",
+        "text": "购物车",
+        "iconPath": "icons/cart_unchecking.png",
+        "selectedIconPath": "icons/cart_checking.png"
+      },
+      {
+        "pagePath": "pages/user/index",
+        "text": "我的",
+        "iconPath": "icons/user_unchecking.png",
+        "selectedIconPath": "icons/user_checking.png"
+      },
+      {
+        "pagePath": "pages/shop/category/category",
+        "text": "商城",
+        "iconPath": "icons/shop_unchecking.png",
+        "selectedIconPath": "icons/shop_checking.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "useExtendedLib": {
+    "weui" : true
+  }
+}

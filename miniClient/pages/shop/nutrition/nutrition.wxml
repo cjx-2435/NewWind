@@ -1,0 +1,34 @@
+<!-- pages/shop/nutrition/nutrition.wxml -->
+<view class="swiper">
+    <image mode="widthFix" class="swiper_img" src="https://test.zhipu-china.com:20111/swiper/2.jpg"></image>
+</view>
+<!-- 营养鲜家产品列表 -->
+<view class="container nutrition">
+    <span>营养鲜家</span>
+    <view class="nutrition_list">
+        <!-- <view wx:for="{{nutritionList}}" class="nutrition_item"> -->
+            <navigator
+			 class="nutrition_item"
+			 wx:for="{{nutritionList}}"
+			 wx:key="goods_id"
+			 url="/pages/shop/detail/detail?goods_id={{item.goods_id}}"
+			>
+            <view class="nutrition_item_img">
+                <image src="https://test.zhipu-china.com:20111/swiper/2.jpg" lazy-load="true" />
+            </view>
+            <view class="nutrition_item_info">
+                <view class="nutrition_title">胚胎米</view>
+                <p class="nutrition_info">留胚率在百分之八十以上留胚率在百分之八十以上留胚率在百分之八十以上留胚率在百分之八十以上</p>
+                <view class="nutrition_item_remark">
+                    <view class="nutrition_item_price">￥1000</view>
+                    <view class="nutrition_item_operate">
+                        <text class="iconfont icon-shoucang"></text>
+                        <text class="iconfont icon-fenxiang"></text>
+                        <text class="iconfont icon-gouwuchekong"></text>
+                    </view>
+                </view>
+            </view>
+            </navigator>
+        <!-- </view> -->
+    </view>
+</view>

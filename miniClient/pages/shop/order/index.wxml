@@ -1,0 +1,56 @@
+<!-- 父组件通过标签属性向子组件传递数据 -->
+<!-- 子向父传递时通过事件的方式，需要在子组件的标签上家兔一个自定义事件 -->
+<Tabs tabs="{{tabs}}" bind:itemchange="handleItemchange">
+	<block wx:if="{{tabs[0].isActive}}">
+		<view class="tab_all">
+			<navigator
+			 class="orders_item"
+			 wx:for="{{orders}}"
+			 wx:key="orders_id"
+			 url=""
+			>
+				<!-- 上方订单编号 订单状态 -->
+				<view class="orders_title_wrap">
+					<view class="orders_number">{{item.order_number}}</view>
+					<view class="orders_state">{{item.order_state}}</view>
+				</view>
+				<navigator 
+				class="orders_goods_wrap"
+				wx:for="{{item.goods}}"
+				wx:for-item="goods"
+				wx:key="goods_id"
+				>
+					<!-- 左侧 商品图片 -->
+					<view class="orders_img_wrap">
+						<image mode="widthFix" src="{{goods.goods_small_logo?goods.goods_small_logo:'/images/small.jpg'}}" />
+					</view>
+					<!-- 右侧 商品信息 -->
+					<view class="orders_info_wrap">
+						<view class="goods_name">{{goods.goods_name}}</view>
+						<view class="goods_info">
+							<view class="goods_price">￥{{goods.goods_price}}</view>
+							<text class="goods_num" decode="{{true}}">X&nbsp;{{goods.order_count}}</text>
+						</view>
+					</view>
+				</navigator>
+				<!-- 下方 订单日期 售后按钮 发票 再次购买 -->
+				<view class="total_info_wrap">
+					<view class="total_info_wrap_item">总数量:{{item.total_count}}</view>
+					<view class="total_info_wrap_bigitem">总额:{{item.total_price}}</view>
+					<view class="total_info_wrap_item">优惠:{{item.order_deduction}}</view>
+					<view class="total_info_wrap_bigitem">实付:{{item.order_actually_paid}}</view>
+				</view>
+				<view class="footer_btn_wrap">
+					<view class="orders_date">{{item.create_time_cn}}</view>
+					<view class="orders_item_btn">申请售后</view>
+					<view class="orders_item_btn">查看发票</view>
+					<view class="orders_item_btn">再次购买</view>
+				</view>
+				
+			</navigator>
+		</view>
+	</block>
+	<block wx:if="{{tabs[1].isActive}}">1</block>
+	<block wx:if="{{tabs[2].isActive}}">2</block>
+</Tabs>
+

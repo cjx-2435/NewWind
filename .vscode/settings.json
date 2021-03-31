@@ -1,0 +1,7 @@
+{
+    "editor.fontSize": 16,
+    "window.zoomLevel": 1.2,
+    "less.compile": {
+    "outExt": ".wxss", // 输出文件的后缀,小程序可以写'wxss'
+    }
+}

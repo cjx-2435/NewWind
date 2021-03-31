@@ -1,0 +1,72 @@
+page {
+  background-color: #ffffff;
+}
+.scan_qcode {
+  padding-top: 15rpx;
+  padding-right: 20rpx;
+  text-align: right;
+}
+.dev_list_wrap {
+  padding-left: 15rpx;
+  padding-right: 15rpx;
+  font-size: 34rpx;
+}
+.dev_list_wrap .dev_list_item {
+  margin-top: 15rpx;
+  border-radius: 15rpx;
+  border: 2rpx solid #e3f4f5;
+  padding: 25rpx;
+  background-color: #e3f5ed;
+  justify-content: center;
+}
+.dev_list_wrap .dev_list_item switch {
+  zoom: 0.7;
+}
+.dev_list_wrap .dev_list_item .dev_item_title {
+  display: flex;
+}
+.dev_list_wrap .dev_list_item .dev_item_title .icon-small {
+  flex: 1;
+}
+.dev_list_wrap .dev_list_item .dev_item_title text {
+  flex: 5;
+  text-align: center;
+}
+.dev_list_wrap .dev_list_item .dev_item_title .dev_item_remove {
+  flex: 1;
+  text-align: right;
+  color: blue;
+}
+.dev_list_wrap .dev_list_item .dev_item_text_wrap {
+  display: flex;
+  flex-direction: column;
+}
+.dev_list_wrap .dev_list_item .dev_item_text_wrap .dev_text_item {
+  flex: 1;
+  padding-top: 25rpx;
+}
+.dev_list_wrap .dev_list_item .dev_item_text_wrap .dev_text_item_wrap {
+  flex: 1;
+  padding-top: 25rpx;
+  display: flex;
+}
+.dev_list_wrap .dev_list_item .dev_item_text_wrap .dev_text_item_wrap .dev_text_remark_input {
+  flex: 1;
+}
+.dev_list_wrap .dev_list_item .dev_item_text_wrap .dev_text_item_wrap .dev_text_sele_btn {
+  border-radius: 15rpx;
+  flex: 1;
+  color: #fff;
+  text-align: center;
+  background-color: #52c690;
+}
+.dev_list_wrap .dev_list_item .dev_item_text_wrap .dev_text_item_wrap .dev_text_item_changeMode {
+  padding-left: 15rpx;
+  padding-right: 15rpx;
+  background-color: #52c690;
+  border-radius: 15rpx;
+  color: #fff;
+}
+.dev_list_wrap .dev_list_item .dev_item_text_wrap .dev_text_item_wrap input {
+  margin-top: 6rpx;
+}

@@ -1,0 +1,21 @@
+
+<view wx:if="{{!canIUse}}">请升级微信版本</view>
+<!-- <button class="weui-btn weui-btn_mini weui-btn_primary" bindtap="login">登录</button>  -->
+
+<button
+ wx:elif="{{!userInfo.nickName}}"
+ type="primary"
+ plain
+ open-type="getUserInfo"
+ bindgetuserinfo="handlegetUserInfo"
+>获取用户信息
+</button>
+
+<button wx:else
+ type="primary"
+ plain="true"
+ open-type="getPhoneNumber"
+ bindgetphonenumber="handlegetPhoneNumber"
+>手机号登录
+</button>
+

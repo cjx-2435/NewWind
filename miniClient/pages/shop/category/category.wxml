@@ -1,0 +1,9 @@
+<!-- pages/shop/category/category.wxml -->
+<view class="shop_list">
+    <navigator class="shop_item" wx:for="{{swipers}}" wx:key="goods_id" url="/pages/shop/health/health">
+        <view class="shop_item" wx:for="{{swipers}}" wx:key="goods_id">
+            <image mode="widthFix" class="shop_bg" src="{{item.imageSrc}}"></image>
+            <span class="shop_catename">健康之家</span>
+        </view>
+    </navigator>
+</view>

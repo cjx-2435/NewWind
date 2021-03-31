@@ -1,0 +1,81 @@
+//promise 语法
+success:(res)=>{
+            console.log(res.code)
+            //this.data.code = res.code
+            request({
+              url:"/login",
+              data:{
+                code: res.code,
+              }
+            })
+            .then(result=>{
+              console.log(result)
+            })
+          }
+
+wx.checkSession({
+  success: function(){
+    //session_key 未过期，并且在本生命周期一直有效
+  },
+  fail: function(){
+    // session_key 已经失效，需要重新执行登录流程
+    wx.qy.login() //重新登录
+  }
+})
+
+//es7 语法
+async testConnect(){
+    const res= await request({
+      url:"/login",
+      data:{
+        code: this.data.code,
+      }
+    });
+    console.log(res.data)
+  }
+
+//跳转页面
+  wx.navigateBack({
+      delta: 1
+      //complete: (res) => {},
+    }); 
+
+//websocket
+const socket = wx.connectSocket({
+      url: 'wss://test.zhipu-china.com:20111/webSocket/111'
+    })
+    console.log(socket)
+    wx.onSocketOpen((result) => {
+      console.log("webSocket 已连接")
+      this.data.socketStatus = "connected"
+      this.sendMessage()
+    })
+    wx.onSocketClose((result) => {
+      this.data.socketStatus = "closed"
+      console.log("webSocket 已断开")
+    }),
+    wx.onSocketError((error) => {
+      console.error("socket error:",error)
+    }),
+    wx.onSocketMessage((message) => {
+      message = message.data.replace(" ", "");
+      if (typeof message != 'object') {
+        message = message.replace(/\ufeff/g, ""); //重点
+        const jj = JSON.parse(message);
+        message = jj;
+      }
+      console.log("【websocket监听到消息】内容如下：");
+      console.log(message);
+    })
+
+//weui使用方式
+<button class="weui-btn weui-btn_mini weui-btn_primary">开关</button>
+<button class="weui-btn weui-btn_mini weui-btn_default">按钮</button>
+<button class="weui-btn weui-btn_mini weui-btn_warn">按钮</button>
+
+//云函数数据库
+/* const db = wx.cloud.database();
+    const users = db.collection("users").where({});
+    users.get().then(res=>{
+      console.log(res)
+    }) */
